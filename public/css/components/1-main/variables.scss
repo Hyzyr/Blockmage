@@ -1,11 +1,16 @@
-$primary: #1ab2e2;
-$primary-1: #0a52b0;
-$primary-2: #0e285c;
 $black: #101010;
 $black-2: #2e2d3a;
 $black-bg: #191825;
 $white: #fff;
+$white-text: #eae7ed;
 
-$font-primary: "Inter", sans-serif;
-$font-secondary: "Gosha Sans", $font-primary;
+$primary: #1ab2e2;
+$primary-light: mix($primary, $white, 40%);
+$primary-1: #0a52b0;
+$primary-2: #0e285c;
+
+$gradient: linear-gradient(94.72deg, #0a52b0 19%, #0e285c 135.42%);
+
+$font-secondary: "Inter", sans-serif;
+$font-primary: "Gosha Sans", $font-secondary;
 $font-outfit: "Outfit", sans-serif;

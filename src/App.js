@@ -1,10 +1,7 @@
+import ComingSoon from "./pages/comingSoon/ComingSoon";
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  return <ComingSoon />;
 }
 
 export default App;

@@ -29,37 +29,35 @@ input::-webkit-inner-spin-button {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: $black-bg;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba($color: #000, $alpha: 0.2);
-  border-radius: 10px;
+  background: rgba($primary-1, 0.5);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba($color: #000, $alpha: 0.3);
+  background: $primary-1;
 }
 
 body {
   height: 100%;
   cursor: default;
   font-family: $font-secondary, sans-serif;
-  font-size: 14px;
-  color: $black;
+  font-size: 16px;
+  color: rgba($white-text, 0.6);
   line-height: 1.7em;
   font-weight: 400;
-  background: $white;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background: $white;
+  background: $black-bg;
 }
 body.active {
   overflow: hidden;
