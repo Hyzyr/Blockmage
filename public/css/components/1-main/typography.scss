@@ -21,21 +21,24 @@
 
 /* Typography */
 h1 {
-  font-size: 65px;
+  font-size: 54px;
 }
 h2 {
-  font-size: 48px;
+  font-size: 42px;
 }
 h3 {
-  font-size: 34px;
+  font-size: 32px;
 }
 h4 {
-  font-size: 22px;
+  font-size: 28px;
 }
 h5 {
-  font-size: 20px;
+  font-size: 24px;
 }
 h6 {
+  font-size: 20px;
+}
+strong {
   font-size: 18px;
 }
 h1,
@@ -43,12 +46,33 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: $white;
+h6,
+strong {
+  font-family: $font-primary;
   font-weight: 700;
+  color: $white;
   line-height: 1.2em;
 }
-
 p {
-  line-height: 1.8em;
+  font-family: $font-secondary;
+  color: rgba($white-text, 0.5);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@mixin typography-768 {
+  h3 {
+    font-size: 28px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+}
+@mixin typography-460 {
+  h3 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 16px;
+  }
 }

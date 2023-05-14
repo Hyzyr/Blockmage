@@ -1,12 +1,31 @@
 import React from "react";
-import { frameSVG } from "../SVG";
 import { motion } from "framer-motion";
+import {
+  frameCardBigSVG,
+  frameCardSVG,
+  frameCardWideSVG,
+  frameMetal,
+  frameNote,
+  frameSVG,
+  frameSliderSVG,
+} from "./SVGFrames";
 
 const Frame = ({ type = "default", children }) => {
-  const frame = type === "default" ? frameSVG : null;
+  const getFrame = () => {
+    if (type === "default") return frameSVG;
+    if (type === "metal") return frameMetal;
+    if (type === "card") return frameCardSVG;
+    if (type === "cardWide") return frameCardWideSVG;
+    if (type === "cardBig") return frameCardBigSVG;
+    if (type === "sliderFrame") return frameSliderSVG;
+    if (type === "note") return frameNote;
+
+    return null;
+  };
+  const frame = getFrame();
 
   return (
-    <div className="frameBg">
+    <div className={`frameBg ${frame ? "" : "_noframe"}`}>
       {frame && <div className="frameBg__frame">{frame}</div>}
       <div className="frameBg__inner">{children}</div>
     </div>

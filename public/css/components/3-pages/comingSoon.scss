@@ -14,6 +14,8 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 575px;
     }
     ._box {
       top: calc(50% + 25px);
@@ -53,6 +55,75 @@
     }
     .button {
       margin-top: 10px;
+    }
+  }
+}
+
+@mixin comingSoon-1160 {
+  .comingSoon {
+    & > .frameBg {
+      ._box {
+        top: calc(50% + 200px);
+        left: calc(50% + 250px);
+        height: 200px;
+      }
+      ._reverse {
+        left: calc(50% - 250px);
+      }
+    }
+  }
+}
+@mixin comingSoon-1025 {
+  .comingSoon {
+    padding: 120px 40px 100px 40px;
+
+    & > .frameBg {
+      ._logo {
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 65px;
+      }
+    }
+  }
+}
+@mixin comingSoon-768 {
+  .comingSoon {
+    padding: 120px 30px 100px 30px;
+
+    & > .frameBg {
+      ._hud {
+        width: 120vw;
+        max-width: unset;
+      }
+      ._box {
+        display: none;
+      }
+    }
+  }
+}
+@mixin comingSoon-580 {
+  .comingSoon {
+    &__inner {
+      padding: 100px 30px 120px 30px;
+    }
+  }
+}
+@mixin comingSoon-460 {
+  .comingSoon {
+    padding: 100px 15px 60px 15px;
+    &__inner {
+      padding: 80px 20px 100px 20px;
+    }
+    & > .frameBg {
+      ._hud {
+        width: unset;
+        height: 80vh;
+
+        img {
+          width: unset;
+        }
+      }
     }
   }
 }

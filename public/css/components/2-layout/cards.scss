@@ -1,0 +1,242 @@
+/// section solutions
+.card {
+  &Section {
+    padding: 30px 0;
+    &__inner {
+      max-width: 1190px;
+      margin: 0 auto;
+
+      &-header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        text-align: center;
+        width: 100%;
+        max-width: 710px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+
+        h3 {
+          text-transform: uppercase;
+        }
+        p {
+          max-width: 570px;
+          margin: 0 auto;
+          line-height: 1.7;
+        }
+      }
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px 10px;
+      }
+    }
+    &--pricing & {
+      &__inner {
+        max-width: 1130px;
+      }
+    }
+  }
+  &Solution {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(33.3% - 10px);
+    max-width: 360px;
+
+    padding: 40px 40px 40px 30px;
+
+    .blur {
+      z-index: -1;
+      transform: scale(0.8);
+      opacity: 0.5;
+      top: 24%;
+      left: 24%;
+      transition: 1s ease-out;
+    }
+    &-icon {
+      font-size: 20px;
+      width: 2.5em;
+      height: 2.5em;
+      align-self: flex-start;
+      padding: 0.5em;
+      background: linear-gradient(
+        141.63deg,
+        rgba(26, 178, 226, 0.5) -6.33%,
+        rgba(10, 82, 176, 0.5) 114.73%
+      );
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.19);
+      backdrop-filter: blur(4px);
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    &:hover {
+      .blur {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+  &Pricing {
+    position: relative;
+    width: calc(50% - 10px);
+    max-width: 540px;
+    padding: 30px 50px 50px 60px;
+
+    //display
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    &--wide {
+      padding: 50px 30px;
+
+      width: 100%;
+      max-width: unset;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h6 {
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: $white-text;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      &._center {
+        text-align: center;
+      }
+    }
+    &__price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6em;
+
+      h2 {
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: $white-text;
+      }
+      small {
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: rgba($white-text, 0.5);
+      }
+    }
+    &__action {
+      margin: 0 auto;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: auto;
+      max-width: 720px;
+
+      &-item {
+        position: relative;
+        padding-left: 1.6em;
+        font-size: 20px;
+
+        &-ico {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1.1em;
+          max-height: 1em;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          font-weight: 500;
+          line-height: 1.7;
+          color: $white-text;
+        }
+      }
+    }
+  }
+}
+
+@mixin card-1025 {
+  .card {
+    &Section {
+      &__inner {
+        &-row {
+          justify-content: space-evenly;
+        }
+      }
+    }
+    &Solution {
+      width: calc(50% - 10px);
+    }
+  }
+}
+@mixin card-940 {
+  .card {
+    &Pricing {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+}
+@mixin card-768 {
+  .card {
+    &Solution {
+      width: 100%;
+    }
+  }
+}
+@mixin card-580 {
+  .card {
+    &Pricing {
+      padding: 35px 25px;
+
+      &__list {
+        &-item {
+          font-size: 18px;
+          padding-left: 1.2em;
+
+          &-ico {
+            left: -0.4em;
+          }
+
+          p {
+            line-height: 1.5;
+          }
+        }
+      }
+      &__action {
+        .button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
