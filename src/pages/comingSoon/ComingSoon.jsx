@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
-const ComingSoon = () => {
+const ComingSoon = ({ onClick }) => {
   return (
     <div className="comingSoon">
       <Frame type="none">
@@ -44,7 +44,9 @@ const ComingSoon = () => {
         <div className="input input--primary">
           <input type="text" placeholder="Email Address" />
         </div>
-        <button className="button button--primary">Subscribe</button>
+        <button className="button button--primary" onClick={onClick}>
+          Subscribe
+        </button>
       </motion.div>
     </div>
   );

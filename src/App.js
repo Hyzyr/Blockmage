@@ -5,13 +5,22 @@ import { useState } from "react";
 import Header from "./components/base/Header";
 
 const App = () => {
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
 
   return (
     <>
       {!auth && (
         <Routes>
-          <Route path="/" element={<ComingSoon />} />
+          <Route
+            path="/"
+            element={
+              <ComingSoon
+                onClick={() => {
+                  setAuth(true);
+                }}
+              />
+            }
+          />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       )}
