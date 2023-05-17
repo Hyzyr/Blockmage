@@ -1,3 +1,4 @@
+import { Button, HamburgerButton } from "components/items/Buttons";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -31,18 +32,11 @@ const Header = () => {
                 </NavLink>
               </div>
               <div className="nav__inner-buttons">
-                <button className="button button--primary">
-                  Stay safe online
-                </button>
+                <Button text="Stay safe online" />
               </div>
             </div>
           </nav>
-          <button
-            className={`burger ${menu ? "active" : ""}`}
-            onClick={toggleMenu}
-          >
-            <span></span>
-          </button>
+          <HamburgerButton isActive={menu} onClick={toggleMenu} />
         </div>
       </div>
     </header>

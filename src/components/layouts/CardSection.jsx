@@ -2,7 +2,7 @@ import React from "react";
 
 const CardSection = ({ title, para, className = "", children }) => {
   return (
-    <div className={`cardSection ${className}`}>
+    <section className={`cardSection ${className}`}>
       <div className="autoContainer">
         <div className="cardSection__inner">
           {(title || para) && (
@@ -14,7 +14,7 @@ const CardSection = ({ title, para, className = "", children }) => {
           <div className="cardSection__inner-row">{children}</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

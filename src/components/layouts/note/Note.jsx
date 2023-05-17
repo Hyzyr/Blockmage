@@ -1,6 +1,7 @@
 import React from "react";
 import Frame, { FrameMotion } from "components/frame/Frame";
 import { innerShape } from "./constants/animations";
+import { Button } from "components/items/Buttons";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -19,7 +20,7 @@ const Note = () => {
               Protect your brand and business from phishing attacks, starting
               today
             </h3>
-            <button className="button button--primary">Contact Us</button>
+            <Button text="Contact Us" />
           </div>
         </div>
       </div>

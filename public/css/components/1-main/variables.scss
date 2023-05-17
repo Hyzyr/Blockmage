@@ -1,15 +1,19 @@
 $black: #101010;
 $black-2: #2e2d3a;
+$black-3: #343538;
 $black-bg: #191825;
 $white: #fff;
 $white-text: #eae7ed;
+
+$gray: #8c8c8c;
 
 $primary: #1ab2e2;
 $primary-light: mix($primary, $white, 40%);
 $primary-1: #0a52b0;
 $primary-2: #0e285c;
 
-$gradient: linear-gradient(94.72deg, #0a52b0 19%, #0e285c 135.42%);
+$gradient: linear-gradient(95deg, #0a52b0 19%, #0e285c 135.42%);
+$gradient-vertical: linear-gradient(180deg, #0a52b0 21.29%, #1ab2e2 195.12%);
 
 $font-secondary: "Inter", sans-serif;
 $font-primary: "Gosha Sans", $font-secondary;

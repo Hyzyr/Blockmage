@@ -10,7 +10,7 @@ import {
   frameSliderSVG,
 } from "./SVGFrames";
 
-const Frame = ({ type = "default", children }) => {
+const Frame = ({ type = "default", overflow, children }) => {
   const getFrame = () => {
     if (type === "default") return frameSVG;
     if (type === "metal") return frameMetal;
@@ -25,7 +25,11 @@ const Frame = ({ type = "default", children }) => {
   const frame = getFrame();
 
   return (
-    <div className={`frameBg ${frame ? "" : "_noframe"}`}>
+    <div
+      className={`frameBg ${frame ? "" : "_noframe"} ${
+        overflow === "visible" ? "_visible" : ""
+      }`}
+    >
       {frame && <div className="frameBg__frame">{frame}</div>}
       <div className="frameBg__inner">{children}</div>
     </div>

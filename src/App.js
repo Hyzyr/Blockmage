@@ -1,8 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
 import Home from "./pages/home/Home";
+import Contacts from "./pages/contacts/Contacts";
 import { useState } from "react";
 import Header from "./components/base/Header";
+import Footer from "./components/base/footer/Footer";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -35,9 +37,10 @@ const AppInner = () => {
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/contact-us" element={<Home />} />
+        <Route path="/contact-us" element={<Contacts />} />
         <Route path="/*" element={<Navigate to="/home" />} />
       </Routes>
+      <Footer />
     </>
   );
 };

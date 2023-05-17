@@ -1,6 +1,7 @@
 import Frame, { FrameMotion } from "components/frame/Frame";
 import React from "react";
 import { innerShape } from "./constants/animations";
+import { Button } from "components/items/Buttons";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -19,7 +20,7 @@ const Info = () => {
               Blockmage Labs is proud to be a partner of Chainabuse as a trusted
               member of the Web3 Security Network.
             </h3>
-            <button className="button button--primary">Contact Us</button>
+            <Button text="Contact Us" />
           </div>
           <div className="info__inner-content">
             <p>

@@ -4,7 +4,8 @@ import Solutions from "./solutions/Solutions";
 import Pricing from "./pricing/Pricing";
 import About from "./about/About";
 import Info from "./info/Info";
-import Note from "./note/Note.jsx";
+import CoreServices from "./coreServices/CoreServices";
+import Note from "components/layouts/note/Note";
 
 const Home = () => {
   return (
@@ -14,53 +15,8 @@ const Home = () => {
       <Pricing />
       <About />
       <Info />
+      <CoreServices />
       <Note />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1>Footer</h1>
     </>
   );
 };

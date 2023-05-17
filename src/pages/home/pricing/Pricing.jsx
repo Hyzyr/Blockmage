@@ -3,6 +3,7 @@ import { doubleTickSVG } from "SVG";
 import CardSection from "components/layouts/CardSection";
 import { cardDetails } from "./constants/cardDetails";
 import Frame from "components/frame/Frame";
+import { Button } from "components/items/Buttons";
 
 const Pricing = () => {
   return (
@@ -35,12 +36,7 @@ const PricingCard = ({ centerTitle = false, wide = false, onClick, data }) => {
         </div>
       )}
       <div className="cardPricing__action">
-        <button
-          type="button"
-          className="button button--primary"
-          onClick={onClick}
-          children="Get Started"
-        />
+        <Button text="Get Started" onClick={onClick} />
       </div>
     </div>
   );

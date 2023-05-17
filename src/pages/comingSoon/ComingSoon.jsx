@@ -7,6 +7,8 @@ import Frame, {
 } from "../../components/frame/Frame";
 import animationSettings from "./constants/animations";
 import { motion } from "framer-motion";
+import { Button } from "components/items/Buttons";
+import Input from "components/items/Input";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -41,12 +43,8 @@ const ComingSoon = ({ onClick }) => {
         </Frame>
         <h1>Coming Soon</h1>
         <label>Get Notified when we launch</label>
-        <div className="input input--primary">
-          <input type="text" placeholder="Email Address" />
-        </div>
-        <button className="button button--primary" onClick={onClick}>
-          Subscribe
-        </button>
+        <Input placeholder="Email Address" />
+        <Button text="Subscribe" onClick={onClick} />
       </motion.div>
     </div>
   );

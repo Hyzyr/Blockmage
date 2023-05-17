@@ -1,10 +1,12 @@
 @media (max-width: 1280px) {
+  @include footer-1280;
 }
 @media (max-width: 1160px) {
   .autoContainer {
     padding: 0 40px;
   }
   @include header-1160;
+  @include footer-1160;
   @include comingSoon-1160;
   @include index-1160;
 }
@@ -14,6 +16,7 @@
   }
   @include header-1025;
   @include comingSoon-1025;
+  @include index-1025;
   @include card-1025;
 }
 
@@ -21,6 +24,7 @@
   .autoContainer {
     padding: 0 25px;
   }
+  @include footer-940;
   @include card-940;
   @include index-940;
 }
@@ -38,6 +42,7 @@
     display: none;
   }
 
+  @include footer-580;
   @include comingSoon-580;
   @include card-580;
   @include index-580;
