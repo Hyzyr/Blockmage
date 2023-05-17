@@ -1,5 +1,7 @@
 @media (max-width: 1280px) {
   @include footer-1280;
+  @include card-1280;
+  @include index-1280;
 }
 @media (max-width: 1160px) {
   .autoContainer {

@@ -1,4 +1,4 @@
-import { githubSVG, tiwtterSVG } from "SVG";
+import { githubSVG, tiwtterSVG } from "assets/SVG";
 import Frame, { FrameMotion } from "components/frame/Frame";
 import { ButtonIcon } from "components/items/Buttons";
 import React from "react";
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer__inner">
           <Frame type="none" overflow={"visible"}>
             <FrameMotion {...innerShape}>
-              <img src={assetsFolder + "shape.png"} alt="shape" />
+              <img src={assetsFolder + "shapes/shape.png"} alt="shape" />
             </FrameMotion>
           </Frame>
           <div className="footer__inner-info">

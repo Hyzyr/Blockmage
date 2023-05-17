@@ -5,7 +5,7 @@
     position: relative;
     height: calc(100vh - 120px - 100px);
     max-height: 900px;
-    min-height: 550px;
+    min-height: 600px;
     padding: 65px 50px;
 
     &-title {
@@ -58,7 +58,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: linear-gradient(180deg, $black-bg 30%, transparent);
+      background: linear-gradient(180deg, $black-bg 70%, transparent);
       opacity: 0.8;
     }
 
@@ -166,6 +166,15 @@
     }
   }
   &--home {
+    ._digits {
+      top: 8%;
+      left: 7%;
+      width: 15px;
+
+      &._reverse {
+        left: 90%;
+      }
+    }
     ._hud {
       left: 35%;
       top: 41%;
@@ -239,6 +248,14 @@
       object-fit: contain;
     }
   }
+  ._blur1 {
+    top: 20%;
+    left: calc(50% - 700px);
+  }
+  ._blur2 {
+    top: 80%;
+    left: calc(50% + 700px);
+  }
 }
 /// section heroSlider
 .heroSlider {
@@ -276,6 +293,7 @@
 }
 //section about
 .about {
+  position: relative;
   padding: 60px 0;
   &__inner {
     max-width: 720px;
@@ -314,6 +332,33 @@
         letter-spacing: 0.01em;
         color: $white-text;
       }
+    }
+  }
+  & > .frameBg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90vh;
+    max-height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    z-index: -1;
+  }
+
+  ._digits {
+    left: 5%;
+    top: 20%;
+
+    &._reverse {
+      top: 80%;
+      left: 93%;
+    }
+    & > div {
+      width: 100%;
+    }
+    img {
+      width: 100%;
     }
   }
 }
@@ -385,10 +430,40 @@
         color: $white-text;
       }
     }
+
+    ._digits {
+      width: 15px;
+
+      &:nth-child(1) {
+        top: 10%;
+        left: 4%;
+      }
+      &:nth-child(2) {
+        top: 50%;
+        left: 9%;
+      }
+      &:nth-child(3) {
+        top: 30%;
+        left: 15%;
+      }
+      &:nth-child(4) {
+        top: 33%;
+        left: 82%;
+      }
+      &:nth-child(5) {
+        top: 54%;
+        left: 88%;
+      }
+      &:nth-child(6) {
+        top: 15%;
+        left: 95%;
+      }
+    }
   }
 }
 /// section coreServices
 .coreServices {
+  position: relative;
   padding: 30px 0;
   &__inner {
     width: 100%;
@@ -518,8 +593,45 @@
       z-index: -1;
     }
   }
-}
+  & > .frameBg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90vh;
+    max-height: 100%;
+    width: 100%;
+    max-width: 1600px;
+    z-index: -1;
+  }
 
+  ._digits {
+    left: 5%;
+    top: 80%;
+
+    &._reverse {
+      top: 20%;
+      left: 93%;
+    }
+    & > div {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+@mixin index-1280 {
+  .coreServices {
+    ._digits {
+      display: none;
+
+      &._reverse {
+        display: block;
+      }
+    }
+  }
+}
 @mixin index-1160 {
   .hero {
     &__contact {
@@ -532,6 +644,8 @@
       }
     }
     &__inner {
+      min-height: 530px;
+
       &-title {
         h1 {
           font-size: 44px;
@@ -548,6 +662,14 @@
           padding: 0.5em 1em 0.55em 1em;
         }
       }
+    }
+    ._blur1 {
+      top: 20%;
+      left: 0;
+    }
+    ._blur2 {
+      top: 80%;
+      left: 100%;
     }
   }
   .info {
@@ -671,6 +793,31 @@
     }
   }
   .coreServices {
+    ._digits {
+      display: block;
+      left: 5%;
+      top: 70%;
+      width: 2%;
+
+      &._reverse {
+        top: 60%;
+        left: 90%;
+      }
+    }
+  }
+  .about {
+    ._digits {
+      left: 5%;
+      top: 70%;
+      width: 2%;
+
+      &._reverse {
+        top: 20%;
+        left: 90%;
+      }
+    }
+  }
+  .coreServices {
     &__inner {
       &-row {
         flex-direction: column;
@@ -738,15 +885,32 @@
         height: unset;
       }
     }
+    ._blur1 {
+      box-shadow: 0 0 150px 50px currentColor;
+    }
+    ._blur2 {
+      box-shadow: 0 0 150px 50px currentColor;
+    }
   }
   .info {
     &__inner {
       padding: 50px 30px;
     }
   }
+  .coreServices {
+    ._digits {
+      display: none;
+    }
+  }
 }
 @mixin index-580 {
   .hero {
+    &__contact {
+      padding: 10px;
+      h1 {
+        font-size: 38px;
+      }
+    }
     &__inner {
       padding: 35px 20px;
       &-title {

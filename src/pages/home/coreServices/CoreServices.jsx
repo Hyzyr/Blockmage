@@ -1,6 +1,7 @@
-import Frame, { FrameBlur, FrameMotion } from "components/frame/Frame";
+import Frame, { FrameBlur, FrameItem, FrameMotion, FrameMotionDiv } from "components/frame/Frame";
 import React from "react";
 import animationSettings from "./constants/animations";
+import { digitsAnimation } from "assets/commonAnimations";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -37,6 +38,36 @@ const CoreServices = () => {
           </div>
         </div>
       </div>
+      <Frame type="none">
+        <FrameItem addClass="_digits">
+          <FrameMotionDiv
+            {...digitsAnimation}
+            transition={{
+              ease: "easeOut",
+              duration: 4,
+              repeat: Infinity,
+              repeatDelay: 2,
+              delay: 0.3,
+            }}
+          >
+            <img src={assetsFolder + "svg/digits-1.svg"} alt="" />
+          </FrameMotionDiv>
+        </FrameItem>
+        <FrameItem addClass="_digits _reverse">
+          <FrameMotionDiv
+            {...digitsAnimation}
+            transition={{
+              ease: "easeOut",
+              duration: 4,
+              repeat: Infinity,
+              repeatDelay: 2,
+              delay: 2.5,
+            }}
+          >
+            <img src={assetsFolder + "svg/digits-2.svg"} alt="" />
+          </FrameMotionDiv>
+        </FrameItem>
+      </Frame>
     </section>
   );
 };

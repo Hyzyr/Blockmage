@@ -10,7 +10,13 @@ import {
   frameSliderSVG,
 } from "./SVGFrames";
 
-const Frame = ({ type = "default", overflow, children }) => {
+const Frame = ({
+  type = "default",
+  overflow,
+  children,
+  motionDiv = false,
+  ...props
+}) => {
   const getFrame = () => {
     if (type === "default") return frameSVG;
     if (type === "metal") return frameMetal;
@@ -23,7 +29,18 @@ const Frame = ({ type = "default", overflow, children }) => {
     return null;
   };
   const frame = getFrame();
-
+  if (motionDiv)
+    return (
+      <motion.div
+        className={`frameBg ${frame ? "" : "_noframe"} ${
+          overflow === "visible" ? "_visible" : ""
+        }`}
+        {...props}
+      >
+        {frame && <div className="frameBg__frame">{frame}</div>}
+        {children && <div className="frameBg__inner">{children}</div>}
+      </motion.div>
+    );
   return (
     <div
       className={`frameBg ${frame ? "" : "_noframe"} ${
@@ -31,7 +48,7 @@ const Frame = ({ type = "default", overflow, children }) => {
       }`}
     >
       {frame && <div className="frameBg__frame">{frame}</div>}
-      <div className="frameBg__inner">{children}</div>
+      {children && <div className="frameBg__inner">{children}</div>}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { doubleTickSVG } from "SVG";
+import { doubleTickSVG } from "assets/SVG";
 import CardSection from "components/layouts/CardSection";
 import { cardDetails } from "./constants/cardDetails";
 import Frame from "components/frame/Frame";
@@ -7,7 +7,7 @@ import { Button } from "components/items/Buttons";
 
 const Pricing = () => {
   return (
-    <CardSection title={"pricing"} className="cardSection--pricing">
+    <CardSection title={"pricing"} className="cardSection--pricing" shapes>
       <PricingCard data={cardDetails.basic} />
       <PricingCard data={cardDetails.standard} />
       <PricingCard data={cardDetails.advanced} />
@@ -19,7 +19,7 @@ const Pricing = () => {
 const PricingCard = ({ centerTitle = false, wide = false, onClick, data }) => {
   return (
     <div className={`cardPricing ${wide ? "cardPricing--wide" : ""}`}>
-      <Frame type={wide ? "cardWide" : "card"} />
+      <Frame type={wide ? "cardWide" : "card"} shapes />
       <div className={`cardPricing__title ${centerTitle ? "_center" : ""}`}>
         <h6>{data.title}</h6>
         {data.subtitle && <span>{data.subtitle}</span>}

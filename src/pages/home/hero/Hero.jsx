@@ -7,6 +7,7 @@ import Frame, {
 } from "../../../components/frame/Frame";
 import animationSettings from "./constants/animations";
 import Slider from "./Slider";
+import { digitsAnimation } from "assets/commonAnimations";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -16,8 +17,12 @@ const Hero = () => {
       <section className="hero hero--home">
         <div className="autoContainer">
           <Frame type="none" overflow={"visible"}>
-            <FrameBlur {...animationSettings.blur1} />
-            <FrameBlur color="secondary" {...animationSettings.blur2} />
+            <FrameBlur addClass="_blur1" {...animationSettings.blur1} />
+            <FrameBlur
+              addClass="_blur2"
+              color="secondary"
+              {...animationSettings.blur2}
+            />
           </Frame>
           <FrameMotion className="hero__inner" {...animationSettings.innerBox}>
             <HeroAnimatedItems />
@@ -40,6 +45,34 @@ const Hero = () => {
 const HeroAnimatedItems = () => {
   return (
     <Frame>
+      <FrameItem addClass="_digits">
+        <FrameMotionDiv
+          {...digitsAnimation}
+          transition={{
+            ease: "easeOut",
+            duration: 4,
+            repeat: Infinity,
+            repeatDelay: 2,
+            delay: 0.3,
+          }}
+        >
+          <img src={assetsFolder + "svg/digits-1.svg"} alt="" />
+        </FrameMotionDiv>
+      </FrameItem>
+      <FrameItem addClass="_digits _reverse">
+        <FrameMotionDiv
+          {...digitsAnimation}
+          transition={{
+            ease: "easeOut",
+            duration: 4,
+            repeat: Infinity,
+            repeatDelay: 2,
+            delay: 2.5,
+          }}
+        >
+          <img src={assetsFolder + "svg/digits-2.svg"} alt="" />
+        </FrameMotionDiv>
+      </FrameItem>
       <FrameItem addClass="_hud">
         <FrameMotionDiv {...animationSettings.station}>
           <img src={assetsFolder + "coming-soon/hud-group.svg"} alt="" />

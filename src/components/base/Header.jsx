@@ -1,12 +1,16 @@
 import { Button, HamburgerButton } from "components/items/Buttons";
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const location = useLocation();
 
+  useEffect(() => {
+    setMenu(false);
+  }, [location]);
   const toggleMenu = () => {
     setMenu(!menu);
   };

@@ -8,7 +8,7 @@ import React from "react";
 import animationSettings from "./constants/animations";
 import Input from "components/items/Input";
 import { Button } from "components/items/Buttons";
-import { PhoneSVG, EmailSVG, MapPinSVG } from "SVG";
+import { PhoneSVG, EmailSVG, MapPinSVG } from "assets/SVG";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
@@ -17,8 +17,12 @@ const Hero = () => {
     <section className="hero hero--contact">
       <div className="autoContainer">
         <Frame type="none" overflow={"visible"}>
-          <FrameBlur {...animationSettings.blur1} />
-          <FrameBlur color="secondary" {...animationSettings.blur2} />
+          <FrameBlur addClass="_blur1" {...animationSettings.blur1} />
+          <FrameBlur
+            addClass="_blur2"
+            color="secondary"
+            {...animationSettings.blur2}
+          />
         </Frame>
         <FrameMotion className="hero__inner" {...animationSettings.innerBox}>
           <HeroAnimatedItems />

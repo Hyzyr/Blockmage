@@ -38,7 +38,7 @@ const ComingSoon = ({ onClick }) => {
       <motion.div className="comingSoon__inner" {...animationSettings.innerBox}>
         <Frame>
           <FrameMotion {...animationSettings.innerShape}>
-            <img src={assetsFolder + "shape.png"} alt="shape" />
+            <img src={assetsFolder + "shapes/shape.png"} alt="shape" />
           </FrameMotion>
         </Frame>
         <h1>Coming Soon</h1>

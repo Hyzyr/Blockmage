@@ -557,70 +557,6 @@ svg {
      object-fit: contain;
 }
 
-.frameBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  padding: 5px;
-}
-.frameBg__frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.frameBg__frame svg {
-  width: 100%;
-  height: 100%;
-}
-.frameBg__inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.frameBg__inner-item {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.frameBg__inner-item svg,
-.frameBg__inner-item img {
-  width: 100%;
-  height: 100%;
-}
-.frameBg__inner-item > div {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-.frameBg__inner-blur {
-  position: absolute;
-  -webkit-box-shadow: 0 0 200px 100px currentColor;
-          box-shadow: 0 0 200px 100px currentColor;
-}
-.frameBg__inner-blur._primary {
-  color: #1ab2e2;
-}
-.frameBg__inner-blur._secondary {
-  color: #0a52b0;
-}
-.frameBg._noframe {
-  padding: 0;
-}
-.frameBg._visible .frameBg {
-  padding: 0;
-}
-.frameBg._visible .frameBg__inner {
-  overflow: visible;
-}
-
 .blur {
   position: absolute;
   -webkit-box-shadow: 0 0 200px 100px currentColor;
@@ -1023,7 +959,73 @@ svg {
   padding: 0 60px;
 }
 
+.frameBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  padding: 5px;
+}
+.frameBg__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.frameBg__frame svg {
+  width: 100%;
+  height: 100%;
+}
+.frameBg__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.frameBg__inner-item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.frameBg__inner-item svg,
+.frameBg__inner-item img {
+  width: 100%;
+  height: 100%;
+}
+.frameBg__inner-item > div {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.frameBg__inner-blur {
+  position: absolute;
+  -webkit-box-shadow: 0 0 200px 100px currentColor;
+          box-shadow: 0 0 200px 100px currentColor;
+}
+.frameBg__inner-blur._primary {
+  color: #1ab2e2;
+}
+.frameBg__inner-blur._secondary {
+  color: #0a52b0;
+}
+.frameBg._noframe {
+  padding: 0;
+}
+.frameBg._visible .frameBg {
+  padding: 0;
+}
+.frameBg._visible .frameBg__inner {
+  overflow: visible;
+}
+
 .cardSection {
+  position: relative;
   padding: 30px 0;
 }
 .cardSection__inner {
@@ -1066,6 +1068,46 @@ svg {
 }
 .cardSection--pricing .cardSection__inner {
   max-width: 1130px;
+}
+.cardSection > .frameBg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 90vh;
+  max-height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  z-index: -1;
+}
+.cardSection ._digits {
+  left: 5%;
+  top: 20%;
+}
+.cardSection ._digits._reverse {
+  top: 80%;
+  left: 93%;
+}
+.cardSection ._digits > div {
+  width: 100%;
+}
+.cardSection ._digits img {
+  width: 100%;
+}
+.cardSection ._shape {
+  top: 0%;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+.cardSection ._shape img {
+  opacity: 0.6;
+}
+.cardSection ._shape._reverse {
+  top: 50%;
+  left: unset;
+  right: 0;
 }
 .cardSolution {
   position: relative;
@@ -1298,7 +1340,7 @@ svg {
   position: relative;
   height: calc(100vh - 120px - 100px);
   max-height: 900px;
-  min-height: 550px;
+  min-height: 600px;
   padding: 65px 50px;
 }
 .hero__inner-title {
@@ -1366,8 +1408,8 @@ svg {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #191825), to(transparent));
-  background: linear-gradient(180deg, #191825 30%, transparent);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #191825), to(transparent));
+  background: linear-gradient(180deg, #191825 70%, transparent);
   opacity: 0.8;
 }
 .hero__contact h1 {
@@ -1486,6 +1528,14 @@ svg {
   width: 13.4%;
   height: 20%;
 }
+.hero--home ._digits {
+  top: 8%;
+  left: 7%;
+  width: 15px;
+}
+.hero--home ._digits._reverse {
+  left: 90%;
+}
 .hero--home ._hud {
   left: 35%;
   top: 41%;
@@ -1557,6 +1607,14 @@ svg {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.hero ._blur1 {
+  top: 20%;
+  left: calc(50% - 700px);
+}
+.hero ._blur2 {
+  top: 80%;
+  left: calc(50% + 700px);
+}
 
 .heroSlider {
   margin-top: 30px;
@@ -1596,6 +1654,7 @@ svg {
 }
 
 .about {
+  position: relative;
   padding: 60px 0;
 }
 .about__inner {
@@ -1640,6 +1699,32 @@ svg {
   line-height: 1.6;
   letter-spacing: 0.01em;
   color: #eae7ed;
+}
+.about > .frameBg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 90vh;
+  max-height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  z-index: -1;
+}
+.about ._digits {
+  left: 5%;
+  top: 20%;
+}
+.about ._digits._reverse {
+  top: 80%;
+  left: 93%;
+}
+.about ._digits > div {
+  width: 100%;
+}
+.about ._digits img {
+  width: 100%;
 }
 
 .info {
@@ -1729,8 +1814,36 @@ svg {
   text-transform: uppercase;
   color: #eae7ed;
 }
+.note__inner ._digits {
+  width: 15px;
+}
+.note__inner ._digits:nth-child(1) {
+  top: 10%;
+  left: 4%;
+}
+.note__inner ._digits:nth-child(2) {
+  top: 50%;
+  left: 9%;
+}
+.note__inner ._digits:nth-child(3) {
+  top: 30%;
+  left: 15%;
+}
+.note__inner ._digits:nth-child(4) {
+  top: 33%;
+  left: 82%;
+}
+.note__inner ._digits:nth-child(5) {
+  top: 54%;
+  left: 88%;
+}
+.note__inner ._digits:nth-child(6) {
+  top: 15%;
+  left: 95%;
+}
 
 .coreServices {
+  position: relative;
   padding: 30px 0;
 }
 .coreServices__inner {
@@ -1867,10 +1980,51 @@ svg {
 .coreServices__banner .frameBg__inner-blur {
   z-index: -1;
 }
+.coreServices > .frameBg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 90vh;
+  max-height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  z-index: -1;
+}
+.coreServices ._digits {
+  left: 5%;
+  top: 80%;
+}
+.coreServices ._digits._reverse {
+  top: 20%;
+  left: 93%;
+}
+.coreServices ._digits > div {
+  width: 100%;
+}
+.coreServices ._digits img {
+  width: 100%;
+}
 
 @media (max-width: 1280px) {
   .footer__inner-links {
     gap: 35px;
+  }
+  .cardSection ._digits {
+    left: 2%;
+    top: 20%;
+    width: 2%;
+  }
+  .cardSection ._digits._reverse {
+    top: 80%;
+    left: 97%;
+  }
+  .coreServices ._digits {
+    display: none;
+  }
+  .coreServices ._digits._reverse {
+    display: block;
   }
 }
 @media (max-width: 1160px) {
@@ -1913,6 +2067,9 @@ svg {
     margin: 0;
     gap: 10px;
   }
+  .hero__inner {
+    min-height: 530px;
+  }
   .hero__inner-title h1 {
     font-size: 44px;
   }
@@ -1922,6 +2079,14 @@ svg {
   }
   .hero__inner-form .button {
     padding: 0.5em 1em 0.55em 1em;
+  }
+  .hero ._blur1 {
+    top: 20%;
+    left: 0;
+  }
+  .hero ._blur2 {
+    top: 80%;
+    left: 100%;
   }
   .info__inner {
     -webkit-box-pack: justify;
@@ -2233,6 +2398,25 @@ svg {
             align-items: center;
     text-align: center;
   }
+  .coreServices ._digits {
+    display: block;
+    left: 5%;
+    top: 70%;
+    width: 2%;
+  }
+  .coreServices ._digits._reverse {
+    top: 60%;
+    left: 90%;
+  }
+  .about ._digits {
+    left: 5%;
+    top: 70%;
+    width: 2%;
+  }
+  .about ._digits._reverse {
+    top: 20%;
+    left: 90%;
+  }
   .coreServices__inner-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2330,8 +2514,19 @@ svg {
     width: 20%;
     height: unset;
   }
+  .hero ._blur1 {
+    -webkit-box-shadow: 0 0 150px 50px currentColor;
+            box-shadow: 0 0 150px 50px currentColor;
+  }
+  .hero ._blur2 {
+    -webkit-box-shadow: 0 0 150px 50px currentColor;
+            box-shadow: 0 0 150px 50px currentColor;
+  }
   .info__inner {
     padding: 50px 30px;
+  }
+  .coreServices ._digits {
+    display: none;
   }
 }
 @media (max-width: 580px) {
@@ -2371,6 +2566,12 @@ svg {
   }
   .cardPricing__action .button {
     font-size: 16px;
+  }
+  .hero__contact {
+    padding: 10px;
+  }
+  .hero__contact h1 {
+    font-size: 38px;
   }
   .hero__inner {
     padding: 35px 20px;

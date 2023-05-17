@@ -1,5 +1,8 @@
 import React from "react";
-import Frame from "components/frame/Frame";
+import Frame, { FrameItem, FrameMotionDiv } from "components/frame/Frame";
+import { digitsAnimation } from "assets/commonAnimations";
+
+const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
 const About = () => {
   return (
@@ -40,6 +43,36 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Frame type="none">
+        <FrameItem addClass="_digits">
+          <FrameMotionDiv
+            {...digitsAnimation}
+            transition={{
+              ease: "easeOut",
+              duration: 4,
+              repeat: Infinity,
+              repeatDelay: 2,
+              delay: 0.3,
+            }}
+          >
+            <img src={assetsFolder + "svg/digits-1.svg"} alt="" />
+          </FrameMotionDiv>
+        </FrameItem>
+        <FrameItem addClass="_digits _reverse">
+          <FrameMotionDiv
+            {...digitsAnimation}
+            transition={{
+              ease: "easeOut",
+              duration: 4,
+              repeat: Infinity,
+              repeatDelay: 2,
+              delay: 2.5,
+            }}
+          >
+            <img src={assetsFolder + "svg/digits-2.svg"} alt="" />
+          </FrameMotionDiv>
+        </FrameItem>
+      </Frame>
     </section>
   );
 };

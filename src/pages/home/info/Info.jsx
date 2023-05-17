@@ -2,17 +2,20 @@ import Frame, { FrameMotion } from "components/frame/Frame";
 import React from "react";
 import { innerShape } from "./constants/animations";
 import { Button } from "components/items/Buttons";
+import { useNavigate } from "react-router-dom";
 
 const assetsFolder = process.env.PUBLIC_URL + "/images/";
 
 const Info = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="info">
       <div className="autoContainer">
         <div className="info__inner">
           <Frame>
             <FrameMotion {...innerShape}>
-              <img src={assetsFolder + "shape.png"} alt="shape" />
+              <img src={assetsFolder + "shapes/shape.png"} alt="shape" />
             </FrameMotion>
           </Frame>
           <div className="info__inner-title">
@@ -20,7 +23,7 @@ const Info = () => {
               Blockmage Labs is proud to be a partner of Chainabuse as a trusted
               member of the Web3 Security Network.
             </h3>
-            <Button text="Contact Us" />
+            <Button text="Contact Us" onClick={() => navigate("/contact-us")} />
           </div>
           <div className="info__inner-content">
             <p>

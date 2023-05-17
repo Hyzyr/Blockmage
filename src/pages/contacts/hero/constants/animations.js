@@ -22,8 +22,6 @@ const animationSettings = {
   },
   blur1: {
     initial: {
-      left: "calc(50% - 395px)",
-      top: "calc(50% - 110px)",
       x: "140px",
       y: "40px",
       opacity: 0.4,
@@ -45,8 +43,6 @@ const animationSettings = {
   },
   blur2: {
     initial: {
-      left: "calc(50% + 395px)",
-      top: "calc(50% + 20px)",
       x: "-140px",
       y: "40px",
       opacity: 1,
