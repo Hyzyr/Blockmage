@@ -7,7 +7,7 @@ import Header from "./components/base/Header";
 import Footer from "./components/base/footer/Footer";
 
 const App = () => {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(1);
 
   return (
     <>

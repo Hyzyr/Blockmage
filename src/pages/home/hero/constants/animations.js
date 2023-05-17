@@ -20,6 +20,25 @@ const animationSettings = {
       repeatDelay: 0.6,
     },
   },
+  station: {
+    initial: {
+      y: -5,
+      opacity: 1,
+      scale: 1,
+    },
+    animate: {
+      y: 5,
+      opaity: 0.6,
+      scale: 0.98,
+    },
+    transition: {
+      ease: "easeOut",
+      duration: 8,
+      repeat: Infinity,
+      repeatType: "mirror",
+      repeatDelay: 0.6,
+    },
+  },
   blur1: {
     initial: {
       left: "calc(50% - 395px)",
@@ -102,6 +121,16 @@ const animationSettings = {
       repeat: Infinity,
       repeatDelay: 2,
       repeatType: "mirror",
+    },
+  },
+  zoomInDefault: {
+    initial: {
+      scale: 0.8,
+      opacity: 0.8,
+    },
+    animate: {
+      scale: 1,
+      opacity: 1,
     },
   },
 };

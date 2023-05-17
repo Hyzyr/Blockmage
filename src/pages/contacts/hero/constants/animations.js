@@ -69,7 +69,7 @@ const animationSettings = {
   },
   innerBox: {
     initial: {
-      rotateX: 90,
+      rotateX: 30,
       opacity: 0,
     },
     animate: {
@@ -78,7 +78,7 @@ const animationSettings = {
     },
     transition: {
       ease: "easeOut",
-      duration: 0.4,
+      duration: 0.6,
     },
   },
   innerShape: {

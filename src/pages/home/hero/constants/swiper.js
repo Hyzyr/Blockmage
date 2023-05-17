@@ -39,7 +39,7 @@ export const swiperData = [
 export const swiperSettings = {
   loop: true,
   freeMode: true,
-  spaceBetween: 25,
+  spaceBetween: 15,
   slidesPerView: "auto",
   watchOverflow: true,
   speed: 5000,
@@ -52,6 +52,11 @@ export const swiperSettings = {
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
+  },
+  breakpoints: {
+    560: {
+      spaceBetween: 25,
+    },
   },
   // onSwiper: (swiper) => console.log(swiper)
   // onSlideChange: () => console.log("slide change")

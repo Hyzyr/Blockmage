@@ -238,11 +238,6 @@
         position: unset;
         transform: unset;
       }
-      &-logo {
-        padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
-      }
       .burger {
         display: block;
         z-index: 2;
@@ -347,6 +342,34 @@
         transition: 0.3s ease-in-out 0.05s;
         transform: translate(0);
       }
+    }
+  }
+}
+@mixin header-768 {
+  .header {
+    &__inner {
+      & > .logo {
+        font-size: 12px;
+      }
+    }
+    & + section {
+      margin-top: 100px;
+    }
+  }
+}
+@mixin header-580 {
+  .header {
+    &__inner {
+      padding: 13px 0;
+      & > .logo {
+        font-size: 10px;
+      }
+      .burger {
+        font-size: 12px;
+      }
+    }
+    & + section {
+      margin-top: 90px;
     }
   }
 }

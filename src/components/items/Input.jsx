@@ -1,9 +1,15 @@
 import React from "react";
 
-const Input = ({ ...props }) => {
+const Input = ({ type, ...props }) => {
+  if (type === "textarea")
+    return (
+      <div className="input input--primary">
+        <textarea type={type} {...props} />
+      </div>
+    );
   return (
     <div className="input input--primary">
-      <input type="text" {...props} />
+      <input type={type} {...props} />
     </div>
   );
 };

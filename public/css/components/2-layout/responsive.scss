@@ -33,6 +33,7 @@
     padding: 0 15px;
   }
   @include typography-768;
+  @include header-768;
   @include comingSoon-768;
   @include card-768;
   @include index-768;
@@ -42,6 +43,7 @@
     display: none;
   }
 
+  @include header-580;
   @include footer-580;
   @include comingSoon-580;
   @include card-580;
